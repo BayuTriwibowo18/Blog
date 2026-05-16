@@ -208,16 +208,119 @@
     .reveal { opacity:0; transform:translateY(28px); transition:opacity .65s ease,transform .65s ease; }
     .reveal.visible { opacity:1; transform:translateY(0); }
 
+    /* ── TABLET (max 900px) ── */
     @media(max-width:900px){
-      nav{padding:1.2rem 2rem}
-      header{grid-template-columns:1fr;padding:7rem 2rem 4rem;gap:3rem}
+      nav{padding:1.1rem 1.5rem}
+      .nav-links{gap:1.4rem}
+      .nav-links a{font-size:.7rem}
+      header{grid-template-columns:1fr;padding:6rem 1.8rem 3.5rem;gap:2rem}
       .hero-right{display:none}
-      section{padding:4rem 2rem}
-      .about-grid,.contact-grid,.edu-grid,.community-grid{grid-template-columns:1fr;gap:2rem}
-      .skills-grid{grid-template-columns:repeat(2,1fr)}
-      .how-grid{grid-template-columns:1fr 1fr}
+      .hero-name{font-size:clamp(2.2rem,7vw,3.5rem)}
+      section{padding:4rem 1.8rem}
+      .about-grid,.contact-grid,.edu-grid{grid-template-columns:1fr;gap:2rem}
+      .about-stats{grid-template-columns:repeat(4,1fr)}
+      .skills-grid{grid-template-columns:repeat(3,1fr)}
+      .how-grid{grid-template-columns:repeat(3,1fr)}
       .portfolio-grid{grid-template-columns:1fr}
-      footer{flex-direction:column;gap:.4rem;padding:1.5rem 2rem}
+      .community-grid{grid-template-columns:1fr;gap:2px}
+      .pdf-embed{height:500px}
+      footer{flex-direction:column;gap:.4rem;padding:1.5rem 1.8rem;text-align:center}
+    }
+
+    /* ── MOBILE (max 600px) ── */
+    @media(max-width:600px){
+      /* NAV — hamburger style collapse */
+      nav{padding:1rem 1.2rem;flex-wrap:wrap;gap:.8rem}
+      .nav-name{font-size:.88rem}
+      .nav-links{
+        display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;
+        width:100%;border-top:1px solid var(--border);padding-top:.8rem;margin-top:.2rem
+      }
+      .nav-links a{font-size:.65rem;letter-spacing:.04em}
+
+      /* HERO */
+      header{padding:7rem 1.2rem 3rem;min-height:auto}
+      .hero-badge{font-size:.58rem;padding:.35rem .7rem;margin-bottom:1.4rem}
+      .hero-name{font-size:clamp(2rem,10vw,2.8rem);margin-bottom:1.2rem}
+      .hero-tagline{font-size:.85rem;margin-bottom:.6rem}
+      .hero-desc{font-size:.85rem;margin-bottom:1.8rem}
+      .hero-ctas{flex-direction:column;gap:.7rem}
+      .btn-primary,.btn-secondary{text-align:center;padding:.8rem 1.5rem;font-size:.7rem}
+
+      /* SECTIONS */
+      section{padding:3rem 1.2rem}
+      .section-label{font-size:.58rem;margin-bottom:2rem}
+      h2{font-size:clamp(1.5rem,6.5vw,2.2rem);margin-bottom:1.5rem}
+
+      /* ABOUT */
+      .about-grid{gap:2rem}
+      .about-text p{font-size:.9rem}
+      .about-stats{grid-template-columns:repeat(2,1fr);padding:1.5rem;gap:1.2rem}
+      .stat-num{font-size:2rem}
+      .stat-label{font-size:.68rem}
+
+      /* HOW I WORK */
+      .how-grid{grid-template-columns:1fr;gap:1rem}
+      .how-card{padding:1.4rem 1.2rem}
+      .how-num{font-size:1.6rem}
+      .how-title{font-size:.85rem}
+      .how-desc{font-size:.75rem}
+
+      /* SKILLS */
+      .skills-grid{grid-template-columns:repeat(2,1fr);gap:1px}
+      .skill-card{padding:1.5rem 1.2rem}
+      .skill-icon{width:36px;height:36px;margin-bottom:.8rem}
+      .skill-name{font-size:.82rem}
+      .skill-desc{font-size:.7rem}
+
+      /* EDUCATION */
+      .edu-grid{grid-template-columns:1fr;gap:1rem}
+      .edu-card{padding:1.5rem}
+      .edu-school{font-size:1rem}
+      .edu-major{font-size:.82rem}
+
+      /* PORTFOLIO */
+      .portfolio-grid{grid-template-columns:1fr;gap:1rem}
+      .portfolio-card{padding:1.5rem}
+      .portfolio-title{font-size:.95rem}
+      .portfolio-desc{font-size:.8rem}
+      .tag{font-size:.55rem}
+
+      /* DESIGN */
+      .design-role{font-size:.82rem}
+      .design-bullets li{font-size:.78rem}
+
+      /* PDF TOOLBAR */
+      .pdf-toolbar{flex-direction:column;align-items:flex-start;gap:.8rem;padding:1rem}
+      .pdf-toolbar-label{font-size:.58rem}
+      .pdf-toolbar-actions{width:100%;display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+      .btn-pdf-open,.btn-pdf-download{justify-content:center;padding:.6rem .8rem;font-size:.6rem}
+      .pdf-embed{height:420px}
+
+      /* COMMUNITY */
+      .community-grid{grid-template-columns:1fr}
+      .community-card{padding:2rem 1.2rem}
+      .community-title{font-size:1rem}
+      .community-desc{font-size:.82rem}
+
+      /* CONTACT */
+      .contact-grid{grid-template-columns:1fr;gap:2rem}
+      .contact-section p{font-size:.88rem}
+      .contact-link{padding:1.1rem 0}
+      .cl-label{font-size:.55rem}
+      .cl-value{font-size:.82rem}
+
+      /* FOOTER */
+      footer{flex-direction:column;gap:.4rem;padding:1.2rem;text-align:center}
+      footer p{font-size:.55rem}
+    }
+
+    /* ── SMALL MOBILE (max 380px) ── */
+    @media(max-width:380px){
+      .nav-links{display:none}
+      .hero-name{font-size:1.9rem}
+      .skills-grid{grid-template-columns:1fr 1fr}
+      .about-stats{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
